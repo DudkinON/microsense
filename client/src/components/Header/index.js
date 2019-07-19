@@ -1,20 +1,10 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
 
-function mapStateToProps(state) {
-  return {};
-}
 
-export class Header extends Component {
-  render() {
-    return (
-      <header>
-        Header
-      </header>
-    );
-  }
-}
+export const Header = () => (
+  <header>
+    Header
+  </header>
+);
 
-export default connect(
-  mapStateToProps,
-)(Header);
+export default Header;

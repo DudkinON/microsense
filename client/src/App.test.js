@@ -11,7 +11,7 @@ describe("Tests for App", () => {
   });
 
   it("checks that App contains Header component", function () {
-    expect(app.find('Connect(Header)').exists()).toBe(true);
+    expect(app.find('Header').exists()).toBe(true);
   });
 
   it('checks that App contains Footer component', function () {

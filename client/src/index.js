@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 // import * as serviceWorker from './serviceWorker';
 
 // Import styles
-import './styles/main.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import application
 import Root from "./Root";

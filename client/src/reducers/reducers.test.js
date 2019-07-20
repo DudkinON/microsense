@@ -8,4 +8,9 @@ describe('reducers', () => {
   it('should contain config reducer', function () {
     expect(list).toHaveProperty('config');
   });
+
+  it('should contains readers reducer', function () {
+    expect(list).toHaveProperty('readers');
+  });
+
 });

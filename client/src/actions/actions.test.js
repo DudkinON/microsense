@@ -56,4 +56,15 @@ describe('actions', () => {
     return check(done);
   });
 
+  it('should add health to the store', function (done) {
+
+    action = actions.getHealth;
+    url = '/health';
+    expectedActions = [{type: types.SET_HEALTH, payload: data}];
+
+    setMock();
+
+    return check(done);
+  });
+
 });

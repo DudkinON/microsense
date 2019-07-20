@@ -8,3 +8,5 @@ const get = (url, type, dispatch) => http.get(url).then(res => {
 });
 
 export const getReaders = url => dispatch => get(url, types.SET_READERS, dispatch);
+
+export const getHealth = url => dispatch => get(url, types.SET_HEALTH, dispatch);

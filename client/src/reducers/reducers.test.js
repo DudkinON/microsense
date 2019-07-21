@@ -16,4 +16,8 @@ describe('reducers', () => {
   it('should contains health reducer', function () {
     expect(list).toHaveProperty('health');
   });
+
+  it('should contains operations reducer', function () {
+    expect(list).toHaveProperty('operations');
+  });
 });

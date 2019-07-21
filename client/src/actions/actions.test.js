@@ -26,9 +26,6 @@ describe('actions', () => {
     done();
   });
 
-  afterEach(() => {
-    mockStore.clearActions();
-  });
 
   beforeEach(function () {
     data = [1, 2, 3];
@@ -61,6 +58,17 @@ describe('actions', () => {
     action = actions.getHealth;
     url = '/health';
     expectedActions = [{type: types.SET_HEALTH, payload: data}];
+
+    setMock();
+
+    return check(done);
+  });
+
+  it('should add health to the store', function (done) {
+
+    action = actions.getOperations;
+    url = '/operations';
+    expectedActions = [{type: types.SET_OPERATIONS, payload: data}];
 
     setMock();
 

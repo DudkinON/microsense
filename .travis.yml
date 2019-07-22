@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t dudkin/microsense-client -f ./client/Dockerfile.ci ./client
+
+script:
+  - docker run dudkin/microsense-client npm test -- --coverage
+

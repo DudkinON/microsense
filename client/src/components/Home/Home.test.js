@@ -8,7 +8,9 @@ describe('Home', () => {
   const props = {
     urls: {
       readers: '/readers',
-      health: '/health'
+      health: '/health',
+      operations: '/operations',
+      jobs: '/jobs'
     },
     health: [
       {reader: "1"},
@@ -19,7 +21,12 @@ describe('Home', () => {
       {name: "2"}
     ],
     onGetReaders: jest.fn(),
-    onGetHealth: jest.fn()
+    onGetHealth: jest.fn(),
+    onGetOperations: jest.fn(),
+    onSetMessage: jest.fn(),
+    onStartJob: jest.fn()
+      .mockReturnValueOnce(Promise
+        .resolve({data: 'success', status: 200}))
   };
   const home = shallow(<Home {...props}/>);
 
@@ -37,6 +44,11 @@ describe('Home', () => {
       .toHaveBeenCalledWith(props.urls.health);
   });
 
+  it('should call onGetOperations with passed url', function () {
+    expect(props.onGetOperations)
+      .toHaveBeenCalledWith(props.urls.operations);
+  });
+
   it('should contains ReadersList component', function () {
     expect(home.find('ReadersList')
       .exists()).toBe(true);
@@ -49,6 +61,16 @@ describe('Home', () => {
 
     expect(home.find('ReadersList')
       .exists()).toBe(false);
+  });
+
+  it('should call onStartJob', function () {
+    const data = {
+      operation: "test operation",
+      readers: ['one', 'two']
+    };
+    home.instance().handleSubmit(data);
+    expect(props.onStartJob)
+      .toHaveBeenCalledWith(props.urls.jobs, data);
   });
 
   it('should return mapped props', function () {

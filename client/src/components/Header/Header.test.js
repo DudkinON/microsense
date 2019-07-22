@@ -11,6 +11,6 @@ describe('Header', () => {
   });
 
   it('should contains Nav component', function () {
-    expect(header.find('Connect(Nav)').exists()).toBe(true);
+    expect(header.find('Nav').exists()).toBe(true);
   });
 });

@@ -11,6 +11,7 @@ export class DisplayWarnings extends Component {
             if (item.status === 'WARNING')
               return <li className="text-warning"
                          key={item.reader}>{item.reader} - {item.status}: {item.message}</li>;
+            else return null;
           })}
         </ol>
       </div>

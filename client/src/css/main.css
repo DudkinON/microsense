@@ -1,0 +1,46 @@
+a {
+    color: #646464;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+.text-error {
+    color: #b71129;
+}
+
+.home {
+    height: 85vh;
+}
+
+.table-header {
+    display: block;
+}
+
+.spacer {
+    padding: 1rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+@media only screen and (max-width: 768px) {
+    .spacer {
+        padding: 4rem;
+        margin: 1rem;
+        background: #f6f6f6;
+    }
+
+    .table-header {
+        display: none;
+    }
+}

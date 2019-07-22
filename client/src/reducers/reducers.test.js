@@ -20,4 +20,8 @@ describe('reducers', () => {
   it('should contains operations reducer', function () {
     expect(list).toHaveProperty('operations');
   });
+
+  it('should contains message reducer', function () {
+    expect(list).toHaveProperty('message');
+  });
 });

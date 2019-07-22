@@ -6,5 +6,5 @@ before_install:
   - docker build -t dudkin/microsense-client -f ./client/Dockerfile.ci ./client
 
 script:
-  - docker run dudkin/microsense-client npm test:ci -- --coverage
+  - docker run dudkin/microsense-client npm run test:ci -- --coverage
 

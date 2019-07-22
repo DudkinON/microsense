@@ -1,5 +1,5 @@
 const conf = {
-  api: 'http://127.0.0.1:5000',
+  api: '/api',
   urls: {
     readers: '/readers',
     health: '/health',

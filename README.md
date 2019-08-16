@@ -95,22 +95,22 @@ http://localhost:3000
 
 #### Step 3
 
-- [Install yarn](https://yarnpkg.com/lang/en/docs/install)
+- Install [yarn](https://yarnpkg.com/lang/en/docs/install)
 
 Then, in the project directory run following commands:
 
 ```
 cd server 
 
-npm install
+yarn install
 
-npm start
+yarn start
 
 cd ../client
 
-npm install
+yarn install
 
-npm start
+yarn start
 ```
 
 #### Step 5
